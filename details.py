@@ -1,0 +1,5 @@
+name = input ("Please enter your name: ")
+age = input ("Please enter your age: ")
+house_number = input ("Please eneter your house number ")
+street = input ("Please enter the street name: ")
+print("Your name is", name + ", aged " + age + ", and you are from " + house_number + " " + street + ".")
