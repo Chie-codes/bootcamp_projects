@@ -1,0 +1,9 @@
+1. How HTTP Applications Preserve State 
+
+~ HTTP is a stateless protocol, this means each request from a client to a server is independent and does not automatically keep information about previous interactions. To maintain the state of an application across multiple request-response cycles, applications use mechanisms such as cookies, sessions, hidden form fields, or tokens. In complex workflows, a pseudoconversational model can be employed, where a unique token is passed between client and server to associate requests with a specific application state.
+~ This approach allows web applications to handle interruptions, delays, or out-of-sequence requests gracefully.
+~ Frameworks like Django simplify state management by providing session middleware, which can store session data in databases, caches, or cookies. Each time a user logs in or interacts with the application, the session allows the server to recognize the user and preserve state across multiple requests securely.
+
+2. Performing Django Database Migrations to a Server-Based Database (MariaDB)
+
+In Django, migrations are used to synchronize changes in models with the database schema. When deploying to a server-based relational database like MariaDB, the process begins by configuring the database connection in settings.py, specifying the database name, user, password, host, and port. After defining or modifying models, you generate migration files using python manage.py makemigrations, which creates scripts describing the required schema changes. Applying these migrations with python manage.py migrate executes the scripts on the MariaDB server, creating or updating tables as needed. In production, it is important to ensure migrations are run in a controlled environment, with backups and version control, to prevent accidental data loss and maintain consistency across multiple environments.
