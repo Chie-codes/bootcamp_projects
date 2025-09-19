@@ -1,0 +1,13 @@
+/* Body background */
+body.bg-light-blue {
+    background-color: #cce7ff;
+}
+
+/* Sticky note card */
+.note-card {
+    background-color: #fff9a7; /* yellow sticky note */
+    border: 1px solid #e6db55;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
